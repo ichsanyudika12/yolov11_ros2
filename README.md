@@ -28,17 +28,20 @@
 
 ### Build & Run
 
-    #1 Clone the repository
+#1 Clone the repository
+
     git clone https://github.com/ichsanyudika/Yolov11-ROS2-CPP.git
     cd Yolov11-ROS2-CPP
     
-    #2 Build the workspace
+#2 Build the workspace
+    
     colcon build --symlink-install
     
-    #3 Source the environment
+#3 Source the environment
+
     source install/setup.bash
 
-    # Run
+# Run
     ros2 run yolo_ws main
 
 ### Result
