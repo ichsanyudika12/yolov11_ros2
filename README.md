@@ -1,4 +1,4 @@
-# YOLOv11 ROS2 C++
+# YOLOv11 ROS2 
 
 Simple ROS2 node for running YOLOv11 ONNX inference using OpenCV + ONNX Runtime (CPU only).
 
@@ -34,8 +34,8 @@ Download YOLOv11 ONNX model and place files like this:
 
 Clone
 
-    git clone https://github.com/ichsanyudika/Yolov11-ROS2-CPP.git
-    cd Yolov11-ROS2-CPP
+    git clone https://github.com/ichsanyudika/yolov11_ros2.git
+    cd yolov11_ros2
 
 Build
 
