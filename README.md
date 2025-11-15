@@ -1,47 +1,52 @@
-## Prerequisites
+# YOLOv11 ROS2 C++
 
-- ROS 2 (Foxy, Humble, or compatible)
+Simple ROS2 node for running YOLOv11 ONNX inference using OpenCV + ONNX Runtime (CPU only).
 
-- OpenCV ≥ 4.5 (with contrib)
+### Features
 
-- ONNX Runtime (C++ version)
+- YOLOv11 inference (ONNX Runtime C++)
 
-- ROS 2 dependencies: rclcpp, geometry_msgs
+- OpenCV preprocessing & drawing
 
-- Tools: cmake, colcon, rosdep
+- ROS2 publisher for detection results
+
+- Very lightweight, no CUDA required
+
+### Prerequisites
+
+- ROS 2 (Foxy / Humble)
+
+- OpenCV ≥ 4.5
+
+- ONNX Runtime (C++ API)
+
+- cmake, colcon, rosdep
 
 ### Model Setup
 
-- Download the YOLOv11 ONNX model (e.g., yolov11.onnx)
+Download YOLOv11 ONNX model and place files like this:
 
-- Place it in the models/ directory
+- models/yolov11.onnx
 
-- Also place coconames.txt (class labels) in the same folder
-
-### Path Verification
-
-- ONNX Runtime: Libraries must be installed and linked properly
-
-- Model: yolov11.onnx inside models/
-
-- Labels: coconames.txt inside models/
+- models/coconames.txt
 
 ### Build & Run
 
-#1 Clone the repository
+Clone
 
     git clone https://github.com/ichsanyudika/Yolov11-ROS2-CPP.git
     cd Yolov11-ROS2-CPP
-    
-#2 Build the workspace
-    
+
+Build
+
     colcon build --symlink-install
-    
-#3 Source the environment
+
+Source
 
     source install/setup.bash
 
-# Run
+Run
+
     ros2 run yolo_ws main
 
 ### Result
